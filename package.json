@@ -10,6 +10,7 @@
     "@mui/icons-material": "^5.15.7",
     "@mui/lab": "^5.0.0-alpha.163",
     "@mui/material": "^5.15.7",
+    "@mui/styles": "^5.15.13",
     "@mui/system": "^5.15.7",
     "@mui/utils": "^5.15.7",
     "@tabler/icons-react": "^2.46.0",
