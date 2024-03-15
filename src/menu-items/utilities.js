@@ -33,6 +33,14 @@ const utilities = {
       breadcrumbs: false
     },
     {
+      id: 'checkout',
+      title: 'Checkout',
+      type: 'item',
+      url: '/checkout',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
       id: 'util-typography',
       title: 'Typography',
       type: 'item',

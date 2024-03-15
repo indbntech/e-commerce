@@ -48,14 +48,19 @@ export default function Products() {
 
   return (
     <React.Fragment>
+       <Card variant="outlined" style={{ backgroundColor: 'white', marginBottom: '1rem' }}>
+      <CardContent>
+        <Typography variant="h3">Products</Typography>
+      </CardContent>
+    </Card>
       <Grid container spacing={3}>
         {/* Products */}
         <Grid item xs={12} md={8}>
           <Card variant="outlined">
             <CardContent>
-              <Typography variant="h5" gutterBottom>
+              {/* <Typography variant="h5" gutterBottom>
                 Products
-              </Typography>
+              </Typography> */}
               <Grid container spacing={2}>
                 {productArray.map((product, index) => (
                   <Grid item xs={6} sm={3} key={index}>
@@ -87,10 +92,10 @@ export default function Products() {
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px' }}>
                           <Typography variant="body2" color="text.secondary" style={{ fontSize: '16px', fontWeight: '700' }}>
-                            {product.newPrice}
+                            ${product.newPrice}
                           </Typography>
                           <Typography variant="body2" color="text.secondary" style={{ textDecoration: 'line-through' }}>
-                            {product.oldPrice}
+                            ${product.oldPrice}
                           </Typography>
                         </div>
                         <Button variant="contained" color="primary" style={{ marginTop: '8px', width: '100%' }}>

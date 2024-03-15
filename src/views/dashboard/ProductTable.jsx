@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
+  Card,
+  CardContent,
   Table,
   TableBody,
   TableCell,
@@ -101,33 +103,34 @@ function ProductTable() {
 
   return (
     <>
-      <div className={classes.root}>
-        <Typography variant="h3" component="div">
-          Product List
-        </Typography>
-        <Toolbar>
-          <Tooltip title="Copy">
-            <IconButton>
-              <FileCopy />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Print">
-            <IconButton>
-              <Print />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Filter">
-            <IconButton>
-              <FilterList />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Add">
-            <IconButton>
-              <AddCircleIcon />
-            </IconButton>
-          </Tooltip>
-        </Toolbar>
-      </div>
+      <Card variant="outlined" style={{ backgroundColor: 'white', marginBottom: '1rem' }}>
+        <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px', '&:last-child': { paddingBottom: '12px' }  }}>
+          <Typography variant="h3">Product List</Typography>
+          <Toolbar style={{ padding: '0' }}>
+            <Tooltip title="Copy">
+              <IconButton style={{ padding: '0 8px' }}>
+                <FileCopy />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Print">
+              <IconButton style={{ padding: '0 8px' }}>
+                <Print />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Filter">
+              <IconButton style={{ padding: '0 8px' }}>
+                <FilterList />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Add">
+              <IconButton style={{ padding: '0 8px' }}>
+                <AddCircleIcon />
+              </IconButton>
+            </Tooltip>
+          </Toolbar>
+        </CardContent>
+      </Card>
+
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead>

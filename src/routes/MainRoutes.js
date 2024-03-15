@@ -5,6 +5,8 @@ import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 import Products from 'views/dashboard/Products';
 import ProductTable from 'views/dashboard/ProductTable';
+import UserProfileTab from 'views/dashboard/Checkout';
+// import { element } from 'prop-types';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
@@ -89,11 +91,15 @@ const MainRoutes = {
     },
     {
       path: 'products',
-      element: <Products/>
+      element: <Products />
     },
     {
       path: 'products-list',
-      element: <ProductTable/>
+      element: <ProductTable />
+    },
+    {
+      path: 'checkout',
+      element: <UserProfileTab />
     }
   ]
 };
