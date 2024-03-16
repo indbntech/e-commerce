@@ -1,104 +1,220 @@
-// BillingInfoPage.js
 import React from 'react';
-import { Card, CardContent, Typography, Button, IconButton, AppBar, Toolbar } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  Typography,
+  Button,
+  IconButton,
+  Grid,
+  TableContainer,
+  Table,
+  TableBody,
+  TableRow,
+  TableCell
+} from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import { Box } from '@mui/system';
 
 const BillingInformation = () => {
-  // Sample billing info data
+  const subtotal = 51.96;
+  const couponDiscount = subtotal * 0;
+  const shippingCharges = subtotal * 0;
+  const total = subtotal + couponDiscount + shippingCharges;
+
+  const onBackClick = () => {
+    console.log('Back button clicked');
+  };
+
+  const onPlaceOrderClick = () => {
+    console.log('Place order button clicked');
+  };
+
   const billingInfoData = [
     {
-      name: 'John Doe',
-      address: '123 Main St, City, Country',
-      phone: '+1234567890'
+      name: 'Martin Shaw',
+      address: '1654 Zideh Plz, 27 Elabe Trailllllll, Suwecpimmmmmm, Kentucky, kGambia - HS6N 5ATkkk',
+      addressType: 'Office',
+      phone: '1234567890'
     },
     {
-      name: 'Jane Smith',
-      address: '456 Elm St, City, Country',
-      phone: '+0987654321'
+      name: 'Billy Castillo',
+      address: '1359 Pusuw Park, 1057 Geptoc Key, Pazworog, Kentucky, Bahrain - FK6T 8HK',
+      addressType: 'Home',
+      phone: '0987654321'
     },
     {
-      name: 'Alex Johnson',
-      address: '789 Oak St, City, Country',
-      phone: '+1357924680'
+      name: 'Brenda Murphy',
+      address: '1654 Zideh Plz, 125 Test Rd, Knoxville, Knoxville, United States - 778',
+      addressType: 'Office',
+      phone: '1357924680'
     }
   ];
 
   const customerDetails = {
-    name: 'John Doe',
-    email: 'john@example.com',
-    contactNumber: '+1234567890',
-    numberOfOrders: 5 // Sample number of orders
+    name: 'Delia Pope',
+    email: 'deliaturewpo@company.com',
+    contactNumber: '9804732942',
+    numberOfOrders: 19
   };
 
   return (
-    <Card style={{ margin: '20px auto', maxWidth: 1000 }}>
-      <CardContent style={{ display: 'flex' }}>
-        {/* Billing Info Cards */}
-        <Card style={{ flex: 2, border: '1px solid #ddd', display: 'flex', flexWrap: 'wrap' }}>
-          <CardContent>
-            <AppBar position="static" color="default">
-              <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  Billing
-                </Typography>
-                <Button style={{ backgroundColor: '#2196f3', color: 'white' }} startIcon={<AddIcon />}>
-                  Add Address
-                </Button>
-              </Toolbar>
-            </AppBar>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', marginTop: 10 }}>
-              {billingInfoData.map((info, index) => (
-                <Card key={index} style={{ width: '48%', marginBottom: 20, border: '1px solid #ddd' }}>
-                  <CardContent>
+    <Grid sx={{ display: 'flex' }}>
+      <Grid container spacing={2} sx={{ display: 'flex', flexBasis: '66%' }}>
+        <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            Billing Address
+          </Typography>
+          <Button style={{ backgroundColor: '#2196f3', color: 'white' }} startIcon={<AddIcon />}>
+            Add Address
+          </Button>
+        </Grid>
+        <Grid>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', marginTop: 10 }}>
+            {billingInfoData.map((info, index) => (
+              <Card key={index} style={{ width: '46%', marginBottom: 20, border: '1px solid #ddd', margin: '24px 0 0 24px' }}>
+                <CardContent>
+                  <div style={{ display: 'flex', gap: '5px' }}>
                     <Typography variant="h5" component="h2">
-                      Name: {info.name}
+                      {info.name}
                     </Typography>
-                    <Typography variant="body1" component="p">
-                      Address: {info.address}
+                    <Typography variant="caption" component="h2">
+                      ({info.addressType})
                     </Typography>
-                    <Typography variant="body1" component="p">
-                      Phone: {info.phone}
-                    </Typography>
-                    <Button variant="contained" color="primary" style={{ marginTop: 10 }}>
+                  </div>
+                  <Typography variant="body1" component="p" sx={{ marginTop: '16px' }}>
+                    {info.address}
+                  </Typography>
+                  <Typography variant="caption" component="p">
+                    {info.phone}
+                  </Typography>
+                  <Grid sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Button
+                      variant="contained"
+                      style={{
+                        marginTop: 10,
+                        color: '#2196f3',
+                        backgroundColor: 'white',
+                        border: '2px solid #2196f380',
+                        borderRadius: '5px',
+                        boxShadow: 'none',
+                        '&:hover': {
+                          backgroundColor: 'blue',
+                          color: 'white'
+                        }
+                      }}
+                    >
                       Deliver to this address
                     </Button>
-                    <IconButton aria-label="edit">
-                      <EditIcon />
-                    </IconButton>
-                    <IconButton aria-label="delete">
-                      <DeleteIcon />
-                    </IconButton>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* Customer Details Card */}
-        <Card style={{ flex: 1, marginRight: 20, border: '1px solid #ddd' }}>
-          <CardContent>
-            <Typography variant="h6" component="h2" gutterBottom>
-              Customer Details
-            </Typography>
-            <Typography variant="body1" component="p">
-              Name: {customerDetails.name}
-            </Typography>
-            <Typography variant="body1" component="p">
-              Email: {customerDetails.email}
-            </Typography>
-            <Typography variant="body1" component="p">
-              Contact Number: {customerDetails.contactNumber}
-            </Typography>
-            <Typography variant="body1" component="p">
-              Number of Orders: {customerDetails.numberOfOrders}
-            </Typography>
-          </CardContent>
+                    <Grid>
+                      <IconButton aria-label="edit">
+                        <EditIcon />
+                      </IconButton>
+                      <IconButton aria-label="delete">
+                        <DeleteIcon />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Grid>
+        <TableContainer>
+          <Table>
+            <TableBody>
+              <TableRow>
+                <TableCell variant="h5" sx={{ fontWeight: '500' }}>
+                  Order Summary
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Subtotal:</TableCell>
+                <TableCell align="right">${subtotal.toFixed(2)}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Coupon Discount:</TableCell>
+                <TableCell align="right">${couponDiscount.toFixed(2)}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Shipping Charges:</TableCell>
+                <TableCell align="right">${shippingCharges.toFixed(2)}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Total:</TableCell>
+                <TableCell align="right">${total.toFixed(2)}</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+        <Card style={{ maxWidth: 400, margin: 'auto' }}>
+          <Card style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            {/* Back Arrow Icon */}
+            <IconButton onClick={onBackClick} aria-label="back">
+              <ArrowBackIcon />
+            </IconButton>
+            {/* Spacer */}
+            <Box flexGrow={1} />
+            {/* Place Order Button */}
+            <Button variant="contained" color="primary" onClick={onPlaceOrderClick}>
+              Place Order
+            </Button>
+          </Card>
         </Card>
-      </CardContent>
-    </Card>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundColor: 'white',
+          flex: 1,
+          margin: '0 20px',
+          border: '1px solid #e3e8ef',
+          borderRadius: '8px',
+          height: 'fit-content'
+        }}
+      >
+        <Card sx={{ margin: '20px', display: 'flex', flexDirection: 'column', height: 'fit-content' }}>
+          <Typography variant="h3" component="h2" gutterBottom style={{ display: 'flex', alignItems: 'center' }}>
+            <PermIdentityIcon />
+            <b>{customerDetails.name}</b>
+          </Typography>
+          <div style={{ marginTop: '10px' }}>
+            <div style={{ paddingTop: '16px' }}>
+              <Typography variant="caption" component="p" style={{ marginBottom: '5px' }}>
+                Email
+              </Typography>
+              <Typography variant="body1" component="p" style={{ marginBottom: '5px' }}>
+                <b> {customerDetails.email}</b>
+              </Typography>
+            </div>
+            <div style={{ paddingTop: '16px' }}>
+              <Typography variant="caption" component="p" style={{ marginBottom: '5px' }}>
+                Contact Number
+              </Typography>
+              <Typography variant="body1" component="p" style={{ marginBottom: '5px' }}>
+                {/* <b> {customerDetails.contactNumber}</b> */}
+                <b>{customerDetails.contactNumber.replace(/^(\d{3})(\d{3})(\d{4})$/, '($1) $2-$3')}</b>
+              </Typography>
+            </div>
+
+            <div style={{ paddingTop: '16px' }}>
+              <Typography variant="caption" component="p" style={{ marginBottom: '5px' }}>
+                Number of Orders
+              </Typography>
+              <Typography variant="body1" component="p" style={{ marginBottom: '5px' }}>
+                <b> {customerDetails.numberOfOrders}</b>
+              </Typography>
+            </div>
+          </div>
+        </Card>
+      </Grid>
+    </Grid>
   );
 };
 
