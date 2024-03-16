@@ -3,9 +3,13 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
+import Products from 'views/dashboard/Products';
+import ProductTable from 'views/dashboard/ProductTable';
+import UserProfileTab from 'views/dashboard/Checkout';
+// import { element } from 'prop-types';
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -84,6 +88,18 @@ const MainRoutes = {
     {
       path: 'sample-page',
       element: <SamplePage />
+    },
+    {
+      path: 'products',
+      element: <Products />
+    },
+    {
+      path: 'products-list',
+      element: <ProductTable />
+    },
+    {
+      path: 'checkout',
+      element: <UserProfileTab />
     }
   ]
 };

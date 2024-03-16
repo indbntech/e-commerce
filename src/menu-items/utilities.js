@@ -17,6 +17,30 @@ const utilities = {
   type: 'group',
   children: [
     {
+      id: 'product',
+      title: 'Products',
+      type: 'item',
+      url: '/products',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
+      id: 'productList',
+      title: 'Product List',
+      type: 'item',
+      url: '/products-list',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
+      id: 'checkout',
+      title: 'Checkout',
+      type: 'item',
+      url: '/checkout',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
       id: 'util-typography',
       title: 'Typography',
       type: 'item',
