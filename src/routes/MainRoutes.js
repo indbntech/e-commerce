@@ -6,6 +6,7 @@ import Loadable from 'ui-component/Loadable';
 import Products from 'views/dashboard/Products';
 import ProductTable from 'views/dashboard/ProductTable';
 import UserProfileTab from 'views/dashboard/Checkout';
+import BillingInformation from 'views/dashboard/BillingInformation';
 // import { element } from 'prop-types';
 
 // dashboard routing
@@ -100,6 +101,10 @@ const MainRoutes = {
     {
       path: 'checkout',
       element: <UserProfileTab />
+    },
+    {
+      path: 'billing',
+      element: <BillingInformation />
     }
   ]
 };
