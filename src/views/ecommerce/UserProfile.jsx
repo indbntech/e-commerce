@@ -63,7 +63,8 @@ import {
                   {productArray.slice(0, 2).map((item) => (
                     <TableRow key={item.id}>
                       <TableCell style={{ display: 'flex', alignItems: 'center', padding: '16px' }}>
-                        <img src={item.image} alt={item.name} style={{ width: 50, height: 50, marginRight: 10 }} />
+                        {/* <img src={item.imgSrc} alt={item.name} style={{ width: 50, height: 50, marginRight: 10 }} /> */}
+                        <img src={item.imgSrc} alt={item.name} style={{ width: 50, height: 50, marginRight: 10 }} />
                         <div>
                           <Typography variant="body1" style={{ color: '#666', marginBottom: '0.5rem' }}>
                             {item.title}

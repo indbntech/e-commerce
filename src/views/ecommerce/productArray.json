@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/1.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "imgSrc": "../../assets/images/product.png",
+    "imgSrc": "./image/product.png",
     "title": "Canon EOS 1500D 24.1 Digital SLR",
     "subTitle": "SLR Camera (Black) with EF S18-55...",
     "rating": "(15.99+)",

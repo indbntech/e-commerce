@@ -14,7 +14,7 @@ import ComplexGrid from 'views/sample-page/ComplexGrid';
 
 // utilities routing
 
-const EcommerceDashboard = Loadable(lazy(() => import('views/ecommerce/dashboard')));
+const EcommerceDashboard = Loadable(lazy(() => import('views/ecommerce/EcommerceDashboard')));
 
 
 // sample page routing
