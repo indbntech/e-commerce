@@ -3,24 +3,22 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
-import Products from 'views/dashboard/Products';
-import ProductTable from 'views/dashboard/ProductTable';
-import UserProfileTab from 'views/dashboard/Checkout';
-import BillingInformation from 'views/dashboard/BillingInformation';
-// import { element } from 'prop-types';
+import Products from 'views/ecommerce/Products';
+import ProductTable from 'views/ecommerce/ProductTable';
+import UserProfileTab from 'views/ecommerce/Checkout';
+import ComplexGrid from 'views/sample-page/ComplexGrid';
+
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
+//const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
 // utilities routing
-const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
-const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
-const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
-const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
-const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
+
+const EcommerceDashboard = Loadable(lazy(() => import('views/ecommerce/dashboard')));
+
 
 // sample page routing
-const SamplePage = Loadable(lazy(() => import('views/sample-page')));
+//const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -30,69 +28,83 @@ const MainRoutes = {
   children: [
     {
       path: '/',
-      element: <DashboardDefault />
+      element: <EcommerceDashboard />
     },
     {
       path: 'dashboard',
       children: [
         {
           path: 'default',
-          element: <DashboardDefault />
+          element: <EcommerceDashboard />
         }
       ]
     },
     {
-      path: 'utils',
+      path: 'ecommerce',
       children: [
         {
-          path: 'util-typography',
-          element: <UtilsTypography />
+          path: 'ecommerceDashboard',
+          element: <EcommerceDashboard/>
         }
       ]
     },
-    {
-      path: 'utils',
-      children: [
-        {
-          path: 'util-color',
-          element: <UtilsColor />
-        }
-      ]
-    },
-    {
-      path: 'utils',
-      children: [
-        {
-          path: 'util-shadow',
-          element: <UtilsShadow />
-        }
-      ]
-    },
-    {
-      path: 'icons',
-      children: [
-        {
-          path: 'tabler-icons',
-          element: <UtilsTablerIcons />
-        }
-      ]
-    },
-    {
-      path: 'icons',
-      children: [
-        {
-          path: 'material-icons',
-          element: <UtilsMaterialIcons />
-        }
-      ]
-    },
-    {
-      path: 'sample-page',
-      element: <SamplePage />
-    },
+    // {
+    //   path: 'utils',
+    //   children: [
+    //     {
+    //       path: 'util-typography',
+    //       element: <UtilsTypography />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'utils',
+    //   children: [
+    //     {
+    //       path: 'util-color',
+    //       element: <UtilsColor />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'utils',
+    //   children: [
+    //     {
+    //       path: 'util-shadow',
+    //       element: <UtilsShadow />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'icons',
+    //   children: [
+    //     {
+    //       path: 'tabler-icons',
+    //       element: <UtilsTablerIcons />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'icons',
+    //   children: [
+    //     {
+    //       path: 'material-icons',
+    //       element: <UtilsMaterialIcons />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'sample-page',
+    //   element: <SamplePage />
+    // }
+    
     {
       path: 'products',
       element: <Products />
+    },
+    {
+      path: 'productDetails',
+      element: <ComplexGrid />
     },
     {
       path: 'products-list',
@@ -101,10 +113,6 @@ const MainRoutes = {
     {
       path: 'checkout',
       element: <UserProfileTab />
-    },
-    {
-      path: 'billing',
-      element: <BillingInformation />
     }
   ]
 };

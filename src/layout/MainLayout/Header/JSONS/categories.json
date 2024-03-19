@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Electronics",
+      "subcategories": ["Mobiles", "Laptops", "Headphones", "Cameras"]
+    },
+    {
+      "id": 2,
+      "title": "Clothing",
+      "subcategories": ["Men", "Women", "Kids"]
+    },
+    {
+      "id": 3,
+      "title": "Home & Furniture",
+      "subcategories": ["Sofas", "Beds", "Tables", "Chairs"]
+    },
+    {
+      "id": 4,
+      "title": "Books",
+      "subcategories": ["Fiction", "Non-fiction", "Best Sellers"]
+    }
+  ]
+  

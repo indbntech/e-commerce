@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Typography, Card, CardContent, Tab, Tabs } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
@@ -10,22 +10,22 @@ import Payment from './Payment';
 const Checkout = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  // const changeTab = (tabIndex) => {
-  //   setActiveTab(tabIndex + 1);
-  // };
-  useEffect(() => {
-    // Retrieve the active tab index from localStorage on component mount
-    const storedTab = localStorage.getItem('activeTab');
-    if (storedTab !== null) {
-      setActiveTab(parseInt(storedTab));
-    }
-  }, []);
-
   const changeTab = (tabIndex) => {
-    setActiveTab(tabIndex);
-    // Store the active tab index in localStorage
-    localStorage.setItem('activeTab', tabIndex);
+    setActiveTab(tabIndex + 1);
   };
+  // useEffect(() => {
+  //   // Retrieve the active tab index from localStorage on component mount
+  //   const storedTab = localStorage.getItem('activeTab');
+  //   if (storedTab !== null) {
+  //     setActiveTab(parseInt(storedTab));
+  //   }
+  // }, []);
+
+  // const changeTab = (tabIndex) => {
+  //   setActiveTab(tabIndex);
+  //   // Store the active tab index in localStorage
+  //   localStorage.setItem('activeTab', tabIndex);
+  // };
 
   return (
     <div>

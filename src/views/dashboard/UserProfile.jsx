@@ -14,17 +14,20 @@ import {
 } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import DeleteIcon from '@mui/icons-material/Delete';
 import productArray from '../dashboard/ProductArray';
-import BillingInformation from './BillingInformation';
+// import BillingInformation from './BillingInformation';
 
-export default function UserProfile() {
+export default function UserProfile({ changeTab }) {
   const subtotal = 51.96;
   const couponDiscount = subtotal * 0;
   const shippingCharges = subtotal * 0;
   const total = subtotal + couponDiscount + shippingCharges;
 
+  const handleButtonClick = () => {
+    changeTab(1); 
+  };
 
   const handleDelete = (itemId) => {
       console.log(`Item with ID ${itemId} would be removed`);
@@ -34,10 +37,10 @@ export default function UserProfile() {
       console.log('Coupon code applied');
     };
   
-    const handleCheckout = () => {
-      console.log('Proceed to checkout');
-      return <BillingInformation />;
-    };
+    // const handleCheckout = () => {
+    //   console.log('Proceed to checkout');
+    //   return <BillingInformation />;
+    // };
 
 
 
@@ -60,7 +63,7 @@ export default function UserProfile() {
               <TableBody>
                 {productArray.slice(0, 2).map((item) => (
                   <TableRow key={item.id}>
-                    <div style={{ display: 'flex', alignItems: 'center', padding: '16px' }}>
+                    <TableCell style={{ display: 'flex', alignItems: 'center', padding: '16px' }}>
                       <img src={item.image} alt={item.name} style={{ width: 50, height: 50, marginRight: 10 }} />
                       <div>
                         <Typography variant="body1" style={{ color: '#666', marginBottom: '0.5rem' }}>
@@ -83,7 +86,7 @@ export default function UserProfile() {
                           Light Primary
                         </Typography>
                       </div>
-                    </div>
+                    </TableCell>
                     <TableCell>
                       <Typography variant="body1" style={{ color: '#666', marginBottom: '0.5rem' }}>
                         ${item.newPrice}
@@ -178,7 +181,7 @@ export default function UserProfile() {
               </Button>
             </Grid>
             <Grid item xs={9}>
-              <Button variant="contained" color="primary" onClick={handleCheckout} fullWidth>
+              <Button variant="contained" color="primary" onClick={handleButtonClick} fullWidth>
                 Checkout
               </Button>
             </Grid>
