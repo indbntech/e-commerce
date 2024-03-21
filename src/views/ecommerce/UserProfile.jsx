@@ -18,15 +18,13 @@ import {
   import DeleteIcon from '@mui/icons-material/Delete';
   import productArray from './productArray';
   
-  export default function UserProfile({ changeTab }) {
+  export default function UserProfile() {
     const subtotal = 51.96;
     const couponDiscount = subtotal * 0;
     const shippingCharges = subtotal * 0;
     const total = subtotal + couponDiscount + shippingCharges;
   
-    const handleButtonClick = () => {
-      changeTab(1); 
-    };
+  
   
     const handleDelete = (itemId) => {
         console.log(`Item with ID ${itemId} would be removed`);
@@ -181,7 +179,7 @@ import {
                 </Button>
               </Grid>
               <Grid item xs={9}>
-                <Button variant="contained" color="primary" onClick={handleButtonClick} fullWidth>
+                <Button variant="contained" color="primary" fullWidth>
                   Checkout
                 </Button>
               </Grid>

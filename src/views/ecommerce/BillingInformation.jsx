@@ -19,7 +19,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { Link } from 'react-router-dom';
 
-const BillingInformation = ({ changeTab }) => {
+const BillingInformation = () => {
   const subtotal = 99.80;
   const couponDiscount = subtotal * 0;
   const shippingCharges = subtotal * 0;
@@ -53,9 +53,6 @@ const BillingInformation = ({ changeTab }) => {
     numberOfOrders: 19
   };
 
-  const handleButtonClick = () => {
-    changeTab(2); 
-  };
 
   return (
     <Grid sx={{ display: 'flex' }}>
@@ -164,7 +161,7 @@ const BillingInformation = ({ changeTab }) => {
             </Link>
           </Grid>
           <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="contained" color="primary" onClick={handleButtonClick()}>
+            <Button variant="contained" color="primary" >
               Place Order
             </Button>
           </Grid>

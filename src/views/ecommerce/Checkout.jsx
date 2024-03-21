@@ -10,23 +10,10 @@ import Payment from './Payment';
 const Checkout = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const changeTab = (tabIndex) => {
-    setActiveTab(tabIndex + 1);
+  const changeTab = (event, tabIndex) => {
+    setActiveTab(tabIndex);
   };
-  // useEffect(() => {
-  //   // Retrieve the active tab index from localStorage on component mount
-  //   const storedTab = localStorage.getItem('activeTab');
-  //   if (storedTab !== null) {
-  //     setActiveTab(parseInt(storedTab));
-  //   }
-  // }, []);
-
-  // const changeTab = (tabIndex) => {
-  //   setActiveTab(tabIndex);
-  //   // Store the active tab index in localStorage
-  //   localStorage.setItem('activeTab', tabIndex);
-  // };
-
+ 
   return (
     <div>
       <Card variant="outlined" style={{ backgroundColor: 'white', marginBottom: '1rem' }}>
@@ -89,9 +76,9 @@ const Checkout = () => {
         </Tabs>
 
         <CardContent>
-          {activeTab  === 0 && <UserProfile changeTab={changeTab}/>}
+          {activeTab === 0 && <UserProfile />}
 
-          {activeTab === 1 && <BillingInformation changeTab={changeTab}/>}
+          {activeTab === 1 && <BillingInformation />}
 
           {activeTab === 2 && <Payment />}
         </CardContent>
