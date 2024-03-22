@@ -12,6 +12,7 @@ import NotificationSection from './NotificationSection';
 
 // assets
 import { IconMenu2 } from '@tabler/icons-react';
+import Categories from 'layout/Categories/Categories';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
@@ -57,6 +58,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
 
       {/* header search */}
       <SearchSection />
+      <Categories/>
       <Box sx={{ flexGrow: 1 }} />
       <Box sx={{ flexGrow: 1 }} />
 

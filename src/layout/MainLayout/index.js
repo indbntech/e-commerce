@@ -77,9 +77,12 @@ const MainLayout = () => {
           transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
         }}
       >
+        <div style={{display:'flex', flexDirection:'column'}}>
+
         <Toolbar>
           <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
         </Toolbar>
+        </div>
       </AppBar>
 
       {/* drawer */}

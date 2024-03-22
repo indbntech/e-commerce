@@ -13,14 +13,13 @@ const EcommerceDashboard = () => (
     {/* <ProductPage /> */}
     {/* <ImageCarousel />
     <br/> */}
-    <FadeSlickSlider/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <PorductCategory/>
-    <ItemMultipleSider/>
-    
+    <FadeSlickSlider />
+    <br />
+    <br />
+    <br />
+    <br />
+    <PorductCategory />
+    <ItemMultipleSider />
   </MainCard>
 );
 

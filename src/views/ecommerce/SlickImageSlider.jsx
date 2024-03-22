@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import React from "react";
 import Slider from "react-slick";
 const img1 = 'https://delhibookstore.com/wp-content/uploads/2023/12/banner-latest1-1.png';
@@ -16,7 +17,7 @@ function FadeSlickSlider() {
     waitForAnimate: false
   };
   return (
-    <div className="slider-container">
+    <Box className="slider-container">
       <Slider {...settings}>
         <div>
           <img src={img1}  alt="..."/>
@@ -31,7 +32,7 @@ function FadeSlickSlider() {
         <img src={img2} alt="..."/>
         </div>
       </Slider>
-    </div>
+    </Box>
   );
 }
 
