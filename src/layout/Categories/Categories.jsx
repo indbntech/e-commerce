@@ -1,51 +1,56 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Box, Card, CardContent, List, ListItem, ListItemText, Divider, Button } from '@mui/material';
 
 const categories = [
   {
     id: 1,
-    name: 'Fiction',
-    subcategories: ['Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy', 'Horror', 'Adventure','Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy', 'Horror', 'Adventure','Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy', 'Horror', 'Adventure'],
+    name: 'Art',
+    subcategories: ['Acting & Auditioning', 'Ancient Civilization', 'Biographical', 'Business', 'Cartooning', 'Collections, Catalogs, Exhibitions', 'Conducting','Discography & Buyer Guides', 'Electricity & Electronics', 'Film', 'Glass & Glassware', 'Individual Artist', 'Jewelery', 'Lightening','Lawyer','Kitchenware', 'Knitting', 'Mass Media'],
   },
   {
     id: 2,
-    name: 'Non-Fiction',
-    subcategories: ['Biography', 'History', 'Self-Help', 'Cooking', 'Travel', 'Science', 'Technology','Biography', 'History', 'Self-Help', 'Cooking', 'Travel', 'Science', 'Technology','Biography', 'History', 'Self-Help', 'Cooking', 'Travel', 'Science', 'Technology'],
+    name: 'Business Economics',
+    subcategories: ['Accounting', 'Banks & Banking', 'Business Etiquette', 'Commerce', 'Corporate & Business History', 'Diet & Nutrition', 'Economic History','Finance', 'Free Enterprise', 'Governmental', 'Infrastructure', 'Knowledge Capital', 'Mail Order', 'Media & Comm. Industries','Money & Monetary Policy', 'Nonprofit Org & Charities'],
   },
   {
     id: 3,
-    name: 'Children',
-    subcategories: ['Picture Books', 'Middle Grade', 'Young Adult', 'Graphic Novels', 'Educational', 'Activity Books','Picture Books', 'Middle Grade', 'Young Adult', 'Graphic Novels', 'Educational', 'Activity Books','Picture Books', 'Middle Grade', 'Young Adult', 'Graphic Novels', 'Educational', 'Activity Books'],
+    name: 'Computer',
+    subcategories: ['Ada', 'Broadband', 'Client, Server Computing', 'Computer Animation', 'Computer Literacy', 'Cybernetics', 'Database Management','E-Commerce', 'Expert Systems', 'HTML', 'Internet', 'Linux', 'Mainframes & Minicomputers', 'Natural Language Processing','Optical Data Processing', 'Programming'],
   },
   {
     id: 4,
-    name: 'Science Fiction',
-    subcategories: ['Aliens', 'Space Opera', 'Cyberpunk', 'Dystopia', 'Time Travel', 'Hard Science Fiction', 'Soft Science Fiction','Aliens', 'Space Opera', 'Cyberpunk', 'Dystopia', 'Time Travel', 'Hard Science Fiction', 'Soft Science Fiction','Aliens', 'Space Opera', 'Cyberpunk', 'Dystopia', 'Time Travel', 'Hard Science Fiction', 'Soft Science Fiction'],
+    name: 'Dentistry',
+  subcategories: ['All Dentistry', 'Biotribiology', 'Dental Assisting', 'Dental Hygiene', 'Dental Informatics', 'Dental Microbiology', 'Dental Pathology','Endodontics', 'Oral History', 'Oral Medicine', 'Oral Radiology', 'Oral Surgery','Orthodontics', 'Periodontics'],
   },
   {
     id: 5,
-    name: 'Fantasy',
-    subcategories: ['High Fantasy', 'Urban Fantasy', 'Epic Fantasy', 'Dark Fantasy', 'Sword and Sorcery', 'Magical Realism', 'Historical Fantasy','High Fantasy', 'Urban Fantasy', 'Epic Fantasy', 'Dark Fantasy', 'Sword and Sorcery', 'Magical Realism', 'Historical Fantasy','High Fantasy', 'Urban Fantasy', 'Epic Fantasy', 'Dark Fantasy', 'Sword and Sorcery', 'Magical Realism', 'Historical Fantasy'],
+    name: 'Education',
+    subcategories: ['Administration', 'Aims & Objectives', 'Arts & Humanities', 'Bilingual Education', 'Children & Youth', 'College Entrance', 'College Guides','Comparative', 'Cryptography', 'Curricula', 'Educational Psychology', 'Educational Reforms', 'Cultural History', 'Economic History','Financial Aid', ],
   },
   {
     id: 6,
-    name: 'History',
-    subcategories: ['Ancient History', 'Medieval History', 'Modern History', 'Military History', 'Social History', 'Cultural History', 'Economic History','Ancient History', 'Medieval History', 'Modern History', 'Military History', 'Social History', 'Cultural History', 'Economic History','Ancient History', 'Medieval History', 'Modern History', 'Military History', 'Social History', 'Cultural History', 'Economic History'],
+    name: 'Engineering',
+    subcategories: ['Aerodynamics', 'Automotive', 'Chemical Dictionary', 'Computational Intelligence', 'Decoration & Ornaments', 'Eletrical', 'Estimating','Historic Preservation', 'Industrial Design', 'Landscape', 'MicroElectronics', 'Piloting & Flight Instruction', 'Aviation', 'Chemical Engineering','Construction'],
   },
   {
     id: 7,
-    name: 'Technology',
-    subcategories: ['Programming', 'Web Development', 'Data Science', 'Machine Learning', 'Artificial Intelligence', 'Cybersecurity', 'Blockchain','Programming', 'Web Development', 'Data Science', 'Machine Learning', 'Artificial Intelligence', 'Cybersecurity', 'Blockchain','Programming', 'Web Development', 'Data Science', 'Machine Learning', 'Artificial Intelligence', 'Cybersecurity', 'Blockchain'],
+    name: 'House & Home',
+    subcategories: ['Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine'],
   },
   {
     id: 8,
-    name: 'Cooking',
+    name: 'Law',
+    subcategories: ['Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine'],
+  },
+  {
+    id: 9,
+    name: 'Life Sciences',
     subcategories: ['Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine','Baking', 'Grilling', 'Vegetarian', 'Vegan', 'Paleo', 'Asian Cuisine', 'Italian Cuisine'],
   },
 ];
 
 const Categories = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategoryHover = (category) => {
     setSelectedCategory(category);
@@ -65,7 +70,7 @@ const Categories = () => {
         top={40}
         left={0}
         zIndex={1000}
-        width={800}
+        width="80vw" // Set width to 80% of viewport width
         onMouseLeave={() => setSelectedCategory(null)}
       >
         <Card variant="outlined" sx={{ display: selectedCategory ? 'block' : 'none' }}>
@@ -92,7 +97,7 @@ const Categories = () => {
                       index % 5 === 0 && (
                         <tr key={index}>
                           {[...Array(5)].map((_, i) => (
-                            <td key={i} style={{ padding: '8px' }}>
+                            <td key={i} style={{ padding: '8px', fontSize:'14px' }}>
                               {selectedCategory.subcategories[index + i]}
                             </td>
                           ))}
