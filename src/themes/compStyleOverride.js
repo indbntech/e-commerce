@@ -15,7 +15,7 @@ export default function componentStyleOverrides(theme) {
       },
       styleOverrides: {
         root: {
-          backgroundImage: 'none'
+          backgroundImage: 'none',
         },
         rounded: {
           borderRadius: `${theme?.customization?.borderRadius}px`

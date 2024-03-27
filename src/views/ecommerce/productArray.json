@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "./image/1.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 2,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 3,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 4,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 5,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 6,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 7,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 8,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  },
+  {
+    "id": 9,
+    "imgSrc": "./image/product.png",
+    "title": "Canon EOS 1500D 24.1 Digital SLR",
+    "subTitle": "SLR Camera (Black) with EF S18-55...",
+    "rating": "(15.99+)",
+    "newPrice": "12.99",
+    "oldPrice": "15.99"
+  }
+]

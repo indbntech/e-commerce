@@ -41,6 +41,22 @@ const utilities = {
       breadcrumbs: false
     },
     {
+      id: 'billing',
+      title: 'Billing',
+      type: 'item',
+      url: '/billing',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
+      id: 'payment',
+      title: 'Payment',
+      type: 'item',
+      url: '/payment',
+      icon: icons.IconTypography,
+      breadcrumbs: false
+    },
+    {
       id: 'util-typography',
       title: 'Typography',
       type: 'item',
