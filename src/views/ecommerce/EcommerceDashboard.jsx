@@ -9,6 +9,8 @@ import ItemMultipleSider from './itemSlider';
 import PorductCategory from './ProductCategory';
 import Banner21 from './image/banner21.png'
 import { Typography } from '@mui/material';
+import Delivery from './delivery';
+
 const EcommerceDashboard = () => (
   <MainCard title="Ecommerce dashboard">
     {/* <ProductPage /> */}
@@ -17,6 +19,7 @@ const EcommerceDashboard = () => (
     <FadeSlickSlider />
     <br />
     <br />
+    <Delivery />
     <br />
     <br />
     <Typography className='itemTitle' variant='h4'>Popular Categories in Books</Typography>

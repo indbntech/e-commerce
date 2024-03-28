@@ -59,18 +59,18 @@ const ecommerceMenu = {
 
 
     {
-      id: 'Agriculture-Science',
-      title: 'Agriculture Science',
+      id: 'category',
+      title: 'Category',
       type: 'item',
-      url: '/agriculture-cience',
-      icon: icons.IconPalette,
+      url: '/category',
+      icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
-      id: 'business-economics',
-      title: 'Business & Economics',
+      id: 'agriculturescience',
+      title: 'Agriculture Science',
       type: 'item',
-      url: '/business-economics',
+      url: '/agriculturescience',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
@@ -78,15 +78,39 @@ const ecommerceMenu = {
       id: 'art',
       title: 'Art',
       type: 'item',
-      url: '/arts',
+      url: '/art',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
-      id: 'computer',
-      title: 'Computer',
+      id: 'business',
+      title: 'Business',
       type: 'item',
-      url: '/computer',
+      url: '/business',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'childrenbook',
+      title: 'Children Book',
+      type: 'item',
+      url: '/childrenbook',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'computers',
+      title: 'Computers',
+      type: 'item',
+      url: '/computers',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'dentistry',
+      title: 'Dentistry',
+      type: 'item',
+      url: '/dentistry',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
@@ -95,6 +119,70 @@ const ecommerceMenu = {
       title: 'Education',
       type: 'item',
       url: '/education',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'engineering',
+      title: 'Engineering',
+      type: 'item',
+      url: '/engineering',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'generalmain',
+      title: 'General Main',
+      type: 'item',
+      url: '/generalmain',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'govtpolicies',
+      title: 'Govt. Policies',
+      type: 'item',
+      url: '/govtpolicies',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'health',
+      title: 'Health',
+      type: 'item',
+      url: '/health',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'house',
+      title: 'House',
+      type: 'item',
+      url: '/house',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'law',
+      title: 'Law',
+      type: 'item',
+      url: '/law',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'lifesciences',
+      title: 'Life Sciences',
+      type: 'item',
+      url: '/lifesciences',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'logistics',
+      title: 'Logistics',
+      type: 'item',
+      url: '/logistics',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
