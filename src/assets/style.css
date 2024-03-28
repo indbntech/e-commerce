@@ -1,0 +1,38 @@
+
+.slick-next, [dir=rtl] .slick-prev {
+    content: "→" !important;
+}
+
+.slick-next, .slick-prev{
+    color: #940b0b !important;
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: green !important;
+}
+.ItemDesign{
+    background-color: #cbcbcb;
+    padding: 2px;
+    color: white;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.arrowStyle .slick-arrow,.slick-prev{
+    background-color: red !important;
+    border-radius: 11px;
+}
+.ImageDesing{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.itemTitle{
+    border-bottom: 1px solid;
+    background: #d3cbcb47;
+    padding: 10px;
+    box-shadow: 3px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
