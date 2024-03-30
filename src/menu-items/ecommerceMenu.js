@@ -13,12 +13,12 @@ const icons = {
 
 const ecommerceMenu = {
   id: 'ecommerce',
-  title: 'E-commerce',
+  title: 'NBS Menu',
   type: 'group',
   children: [
     {
       id: 'e-commerce',
-      title: 'Ecommerce',
+      title: 'Home Page',
       type: 'item',
       url: 'ecommerce/ecommerceDashboard',
       icon: icons.IconTypography,
@@ -32,14 +32,14 @@ const ecommerceMenu = {
       icon: icons.IconTypography,
       breadcrumbs: false
     },
-    {
-      id: 'product-details',
-      title: 'Product Details',
-      type: 'item',
-      url: '/productDetails',
-      icon: icons.IconTypography,
-      breadcrumbs: false
-    },
+    // {
+    //   id: 'product-details',
+    //   title: 'Product Details',
+    //   type: 'item',
+    //   url: '/productDetails',
+    //   icon: icons.IconTypography,
+    //   breadcrumbs: false
+    // },
     {
       id: 'productList',
       title: 'Product List',
@@ -183,6 +183,62 @@ const ecommerceMenu = {
       title: 'Logistics',
       type: 'item',
       url: '/logistics',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'medical',
+      title: 'Medical',
+      type: 'item',
+      url: '/medical',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'misc',
+      title: 'Misc',
+      type: 'item',
+      url: '/misc',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'nature',
+      title: 'Nature',
+      type: 'item',
+      url: '/nature',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'reference',
+      title: 'Reference',
+      type: 'item',
+      url: '/reference',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'science',
+      title: 'Science',
+      type: 'item',
+      url: '/science',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'socialscience',
+      title: 'Social Science',
+      type: 'item',
+      url: '/socialscience',
+      icon: icons.IconShadow,
+      breadcrumbs: false
+    },
+    {
+      id: 'technology',
+      title: 'Technology',
+      type: 'item',
+      url: '/technology',
       icon: icons.IconShadow,
       breadcrumbs: false
     },

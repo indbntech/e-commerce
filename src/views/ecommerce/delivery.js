@@ -8,49 +8,41 @@ import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 
 const Delivery = () => {
     return (
-        <Grid container spacing={2} sx={{ backgroundColor: 'white'}}>
+        <Grid container spacing={2} sx={{ backgroundColor: '#a2cf6e', padding: 4 }}>
             <Grid item xs={12} sm={6} md={3}>
-                <Box className="service-cell" sx={{ display: 'flex', backgroundColor: '#f5f5f5', margin: '2px', padding:2 }}>
-                    <Box>
-                        <LocalShippingOutlinedIcon />
+                <Box className="service-cell" sx={{ backgroundColor: 'white', padding: 2, borderRadius: 4 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                        <LocalShippingOutlinedIcon sx={{ fontSize: 48, color: '#2196f3' }} />
+                        <Typography variant="h3" sx={{ ml: 2 }}>Free Delivery</Typography>
                     </Box>
-                    <Box sx={{ marginLeft: 1 }}>
-                        <Typography variant="h5">Free Delivery</Typography>
-                        <Typography variant="body1">Orders from all items</Typography>
-                    </Box>
+                    <Typography variant="body1" sx={{ color: '#666', mt: 1 }}>Orders from all items</Typography>
                 </Box>
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
-                <Box className="service-cell" sx={{ display: 'flex', backgroundColor: '#f5f5f5', margin: '2px', padding:2 }}>
-                    <Box>
-                        <ReturnIcon />
+                <Box className="service-cell" sx={{ backgroundColor: 'white', padding: 2, borderRadius: 4 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                        <ReturnIcon sx={{ fontSize: 48, color: '#f44336' }} />
+                        <Typography variant="h3" sx={{ ml: 2 }}>Return & Refund</Typography>
                     </Box>
-                    <Box sx={{ marginLeft: 1 }}>
-                        <Typography variant="h5">Return & Refund</Typography>
-                        <Typography variant="body1">Money back guarantee</Typography>
-                    </Box>
+                    <Typography variant="body1" sx={{ color: '#666', mt: 1 }}>Money back guarantee</Typography>
                 </Box>
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
-                <Box className="service-cell" sx={{ display: 'flex', backgroundColor: '#f5f5f5', margin: '2px', padding:2 }}>
-                    <Box>
-                        <DiscountIcon />
+                <Box className="service-cell" sx={{ backgroundColor: 'white', padding: 2, borderRadius: 4 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                        <DiscountIcon sx={{ fontSize: 48, color: '#4caf50' }} />
+                        <Typography variant="h3" sx={{ ml: 2 }}>Member Discount</Typography>
                     </Box>
-                    <Box sx={{ marginLeft: 1 }}>
-                        <Typography variant="h5">Member Discount</Typography>
-                        <Typography variant="body1">On order over $99</Typography>
-                    </Box>
+                    <Typography variant="body1" sx={{ color: '#666', mt: 1 }}>On order over $99</Typography>
                 </Box>
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
-                <Box className="service-cell" sx={{ display: 'flex', backgroundColor: '#f5f5f5', margin: '2px', padding:2 }}>
-                    <Box>
-                        <SupportAgentOutlinedIcon />
+                <Box className="service-cell" sx={{ backgroundColor: 'white', padding: 2, borderRadius: 4 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                        <SupportAgentOutlinedIcon sx={{ fontSize: 48, color: '#ff9800' }} />
+                        <Typography variant="h3" sx={{ ml: 2 }}>Support 24/7</Typography>
                     </Box>
-                    <Box sx={{ marginLeft: 1 }}>
-                        <Typography variant="h5">Support 24/7</Typography>
-                        <Typography variant="body1">Contact us 24 hours a day</Typography>
-                    </Box>
+                    <Typography variant="body1" sx={{ color: '#666', mt: 1 }}>Contact us 24 hours a day</Typography>
                 </Box>
             </Grid>
         </Grid>

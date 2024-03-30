@@ -54,9 +54,9 @@ const ComplexGrid = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Typography sx={{ cursor: 'pointer' }} variant="body2">
+        {/* <Typography sx={{ cursor: 'pointer' }} variant="body2">
           Add carousel
-        </Typography>
+        </Typography> */}
         <Box>
           <AboutUs />
         </Box>

@@ -15,17 +15,17 @@ import tech1 from './image/tech1.jpg';
 import { Link } from 'react-router-dom';
 
 const categories = [
-  { label: 'Law', imageSrc: l1 },
+  { label: 'Art', imageSrc: art1 },
   { label: 'Business', imageSrc: bu1 },
-  { label: 'Medical', imageSrc: me1 },
-  { label: 'Science', imageSrc: sc1 },
   { label: 'Computers', imageSrc: comp1 },
   { label: 'Education', imageSrc: ed1 },
-  { label: 'Social Science', imageSrc: ss1 },
-  { label: 'Reference', imageSrc: ref1 },
-  { label: 'Nature', imageSrc: na1 },
-  { label: 'Art', imageSrc: art1 },
+  { label: 'Law', imageSrc: l1 },
+  { label: 'Medical', imageSrc: me1 },
   { label: 'Misc', imageSrc: misc1 },
+  { label: 'Nature', imageSrc: na1 },
+  { label: 'Reference', imageSrc: ref1 },
+  { label: 'Science', imageSrc: sc1 },
+  { label: 'Social Science', imageSrc: ss1 },
   { label: 'Technology', imageSrc: tech1 },
 ];
 
@@ -34,7 +34,7 @@ const PorductCategory = () => {
     <Grid container spacing={2}>
       {categories.map((category, index) => (
         <Grid item xs={6} sm={4} md={3} key={index}>
-          <Link to={`/category/${category.label}`}>
+          <Link to={`/${category.label}`}>
             <Card className="MuiCard-root">
               <CardMedia component="img" height="140" image={category.imageSrc} alt={category.label} />
               <CardContent>

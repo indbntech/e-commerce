@@ -20,7 +20,7 @@ import { Rating } from '@mui/material';
 // import StarBorderIcon from '@mui/icons-material/StarBorder';
 import productArray from '../ProductArray.json';
 
-export default function Computers() {
+export default function Science() {
   // const [rating, setRating] = React.useState(0);
 
   // const handleRatingChange = (newRating) => {
@@ -50,7 +50,7 @@ export default function Computers() {
     <React.Fragment>
       <Card variant="outlined" style={{ backgroundColor: 'white', marginBottom: '1rem' }}>
         <CardContent>
-          <Typography variant="h3">Computers</Typography>
+          <Typography variant="h3">Science</Typography>
         </CardContent>
       </Card>
       <Grid container spacing={3}>

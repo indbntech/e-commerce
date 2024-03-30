@@ -10,6 +10,7 @@ import PorductCategory from './ProductCategory';
 import Banner21 from './image/banner21.png'
 import { Typography } from '@mui/material';
 import Delivery from './delivery';
+import Footer from 'views/footer/footer';
 
 const EcommerceDashboard = () => (
   <MainCard title="Ecommerce dashboard">
@@ -17,6 +18,7 @@ const EcommerceDashboard = () => (
     {/* <ImageCarousel />
     <br/> */}
     <FadeSlickSlider />
+    <br />
     <br />
     <br />
     <Delivery />
@@ -33,6 +35,9 @@ const EcommerceDashboard = () => (
     <ItemMultipleSider />
     <Typography className='itemTitle' variant='h4'>Special Offers</Typography>
     <ItemMultipleSider />
+    <br />
+    <br />
+    <Footer/>
   </MainCard>
 );
 

@@ -24,6 +24,13 @@ import House from 'views/ecommerce/categories/House';
 import Law from 'views/ecommerce/categories/Law';
 import LifeSciences from 'views/ecommerce/categories/LifeSciences';
 import Logistics from 'views/ecommerce/categories/Logistics';
+import Medical from 'views/ecommerce/categories/Medical';
+import Technology from 'views/ecommerce/categories/Technology';
+import Misc from 'views/ecommerce/categories/Misc';
+import Nature from 'views/ecommerce/categories/Nature';
+import Reference from 'views/ecommerce/categories/Reference';
+import SocialScience from 'views/ecommerce/categories/SocialScience';
+import Science from 'views/ecommerce/categories/Science';
 
 
 // dashboard routing
@@ -194,6 +201,34 @@ const MainRoutes = {
     {
       path: 'logistics',
       element: <Logistics />
+    },
+    {
+      path: 'medical',
+      element: <Medical />
+    },
+    {
+      path: 'misc',
+      element: <Misc />
+    },
+    {
+      path: 'nature',
+      element: <Nature />
+    },
+    {
+      path: 'reference',
+      element: <Reference />
+    },
+    {
+      path: 'science',
+      element: <Science />
+    },
+    {
+      path: 'socialscience',
+      element: <SocialScience />
+    },
+    {
+      path: 'technology',
+      element: <Technology />
     },
   ]
 };
